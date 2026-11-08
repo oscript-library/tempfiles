@@ -56,7 +56,7 @@
 
 ```sh
 opm install --local --dev
-oscript_modules/bin/oneunit e -d tests --mode summary
+oscript_modules/bin/oneunit e -d tests
 ```
 
 Тесты охватывают весь публичный API, readonly-файлы и каталоги, повторную очистку и передачу причины ошибки в результат OneUnit. Проверки блокировки открытого файла выполняются в Windows.

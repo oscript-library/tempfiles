@@ -20,5 +20,4 @@ jobs:
       oscript_version: ${{ matrix.oscript_version }}
       test_engine: oneunit
       test_dir_paths: tests
-      test_log_mod: summary
       build_package: true
