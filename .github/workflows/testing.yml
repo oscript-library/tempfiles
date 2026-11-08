@@ -1,0 +1,24 @@
+name: Тестирование
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        oscript_version: [stable, dev]
+    uses: autumn-library/workflows/.github/workflows/test.yml@main
+    with:
+      oscript_version: ${{ matrix.oscript_version }}
+      test_engine: oneunit
+      test_dir_paths: tests
+      test_log_mod: summary
+      build_package: true
